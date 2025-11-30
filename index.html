@@ -35,29 +35,34 @@
         }
 
         input {
-            width: 100%;
+            width: 90%;
             padding: 12px;
             border-radius: 10px;
             border: none;
             margin: 15px 0;
             font-size: 16px;
+            display: inline-block;
+            background-color: #fff;
+            color: #000;
+            text-align: right;
         }
 
         button {
-            width: 100%;
+            width: 65%;
             padding: 12px;
             background: #0f9;
             border: none;
             font-size: 18px;
             border-radius: 10px;
             cursor: pointer;
+            display: inline-block;
+            margin-bottom: 15px;
         }
 
         button:hover {
             opacity: 0.8;
         }
 
-        /* الإعلان العادي */
         .ad-box {
             background: #222;
             padding: 40px;
@@ -92,7 +97,44 @@
             object-fit: contain;
         }
 
-        /* الكلام الأخضر تحت الإعلان */
+        .tutorial-box {
+            border: 2px solid #0f9;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 12px;
+            color: #0f9;
+            border-radius: 8px;
+            background: #111;
+            text-align: right;
+            line-height: 1.5;
+            direction: rtl;
+        }
+
+        .arrows {
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        .arrows span {
+            display: inline-block;
+            margin: 0 3px;
+            font-size: 18px;
+            color: #0f9;
+            animation: bounce 1s infinite alternate;
+        }
+
+        .arrows span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .arrows span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(5px); }
+        }
+
         .info-box {
             border: 2px solid #0f9;
             padding: 10px;
@@ -106,77 +148,103 @@
 </head>
 <body>
 
-    <!-- تنبيه النسخة التجريبية -->
-    <div class="notice">⚠️ الموقع لا يزال تجريبي</div>
+<div class="notice">⚠️ الموقع لا يزال تجريبي</div>
 
-    <div class="container">
-        <h1>تحميل فيديوهات بدون علامة مائية</h1>
+<div class="container">
+    <h1>تحميل فيديوهات بدون علامة مائية</h1>
 
+    <div style="text-align:center;">
         <input type="text" id="urlInput" placeholder="ألصق رابط الفيديو هنا">
-
-        <!-- زر التحميل -->
+        <br>
         <button onclick="download()">تحميل</button>
+    </div>
 
-        <!-- قسم المنصات بعد زر التحميل -->
-        <div class="platforms">
-            <h3>المنصات المدعومة حالياً</h3>
-            <div class="platform-icons">
-                <img src="tiktok.png" alt="TikTok">
-                <img src="instagram.png" alt="Instagram">
-                <img src="snapchat.png" alt="Snapchat">
-                <img src="facebook.png" alt="Facebook">
-                <img src="youtube.png" alt="YouTube"> <!-- منصة يوتيوب الجديدة -->
-            </div>
-        </div>
-
-        <!-- الإعلان العادي -->
-        <div class="ad-box"><script async="async" data-cfasync="false" src="//pl28162781.effectivegatecpm.com/f7ff63c440743d2c1d2fe556d023793a/invoke.js"></script>
-<div id="container-f7ff63c440743d2c1d2fe556d023793a"></div></div>
-
-        <!-- الكلام الأخضر تحت الإعلان -->
-        <div class="info-box">
-            أعمل باستمرار على توفير بدائل جديدة لتنزيل فيديوهات إنستغرام، وفي حال توقف أي منها يتم استبداله بآخر في أقرب وقت ممكن.
+    <div class="platforms">
+        <h3>المنصات المدعومة حالياً</h3>
+        <div class="platform-icons">
+            <img src="tiktok.png" alt="TikTok">
+            <img src="instagram.png" alt="Instagram">
+            <img src="snapchat.png" alt="Snapchat">
+            <img src="facebook.png" alt="Facebook">
+            <img src="youtube.png" alt="YouTube">
         </div>
     </div>
 
-    <script>
-        function download() {
-            let url = document.getElementById("urlInput").value.trim();
+    <!-- الإعلان الأول (كان الثاني سابقاً) -->
+    <div class="ad-box">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'd221e629778ecad35846dc348e04c45a',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/d221e629778ecad35846dc348e04c45a/invoke.js"></script>
+    </div>
 
-            if (url === "") {
-                alert("رجاءً ضع الرابط أولاً");
-                return;
-            }
+    <!-- النص التعليمي -->
+    <div class="tutorial-box">
+💡 لجعل الموقع اسهل للوصول على جهازك:<br>
+1. افتح الموقع في متصفح Chrome.<br>
+2. اضغط على الثلاث نقاط في الأعلى.<br>
+3. اختر "الاضافه إلى الشاشه الرئيسيه".<br>
+🚀 صار عندك أيقونة مباشرة للوصول للموقع بسرعة!
+    </div>
 
-            // الإعلان الشيطاني 25%
-            if (Math.random() <= 0.25) {
-                window.open("https://example-ad.com", "_blank"); // ضع رابط الإعلان هنا
-            }
+    <div class="arrows">
+        <span>⬇</span>
+        <span>⬇</span>
+        <span>⬇</span>
+    </div>
 
-            // تيك توك
-            if (url.includes("tiktok.com")) {
-                window.location.href =
-                    "https://ssstik.io/ar?url=" + encodeURIComponent(url);
-                return;
-            }
+    <!-- الإعلان الثاني (كان الأول سابقاً) -->
+    <div class="ad-box">
+        <script async="async" data-cfasync="false" src="//pl28162781.effectivegatecpm.com/f7ff63c440743d2c1d2fe556d023793a/invoke.js"></script>
+        <div id="container-f7ff63c440743d2c1d2fe556d023793a"></div>
+    </div>
 
-            // إنستغرام
-            if (url.includes("instagram.com") || url.includes("instagr.am")) {
-                window.location.href =
-                    "https://igram.world/?url=" + encodeURIComponent(url);
-                return;
-            }
+    <div class="info-box">
+        نطوّر الموقع باستمرار لتقديم أفضل تجربة تحميل سريعة ومجانية. أي خدمة تتعطل يتم تحديثها فورًا دون عناء منك. دعمك باستخدام الموقع ومشاركته هو سبب استمرارنا وتحسيننا الدائم. 🚀
+    </div>
 
-            // يوتيوب
-            if (url.includes("youtube.com") || url.includes("youtu.be")) {
-                window.location.href =
-                    "https://ytdown.io/?url=" + encodeURIComponent(url);
-                return;
-            }
+</div>
 
-            alert("الرابط غير مدعوم حالياً");
-        }
-    </script>
+<script>
+function download() {
+    let url = document.getElementById("urlInput").value.trim();
+
+    if (url === "") {
+        alert("رجاءً ضع الرابط أولاً");
+        return;
+    }
+
+    if (Math.random() <= 0.25) {
+        window.open("https://example-ad.com", "_blank");
+    }
+
+    if (url.includes("tiktok.com")) {
+        window.location.href =
+            "https://ssstik.io/ar?url=" + encodeURIComponent(url);
+        return;
+    }
+
+    if (url.includes("instagram.com") || url.includes("instagr.am")) {
+        window.location.href =
+            "https://igram.world/?url=" + encodeURIComponent(url);
+        return;
+    }
+
+    if (url.includes("youtube.com") || url.includes("youtu.be")) {
+        window.location.href =
+            "https://ytdown.io/?url=" + encodeURIComponent(url);
+        return;
+    }
+
+    alert("الرابط غير مدعوم حالياً");
+}
+</script>
 
 </body>
 </html>
