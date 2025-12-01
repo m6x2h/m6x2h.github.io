@@ -199,7 +199,7 @@
         <span>⬇</span>
     </div>
 
-    <!-- الإعلان الثاني -->
+    <!-- الإعلان الثاني مع كود effectivegatecpm -->
     <div class="ad-box">
         <script async="async" data-cfasync="false" src="//effectivegatecpm.com/f7ff63c440743d2c1d2fe556d023793a/invoke.js"></script>
         <div id="container-f7ff63c440743d2c1d2fe556d023793a"></div>
@@ -261,6 +261,16 @@ var sc_security="7b8b76d5";
 </div>
 </noscript>
 <!-- End of Statcounter Code -->
+
+<!-- كود إعادة تحميل الإعلانات فور دخول المستخدم -->
+<script>
+window.addEventListener("load", function() {
+    document.querySelectorAll(".ad-box iframe").forEach(iframe => {
+        let src = iframe.src;
+        iframe.src = src;
+    });
+});
+</script>
 
 </body>
 </html>
